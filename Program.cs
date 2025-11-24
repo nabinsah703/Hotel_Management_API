@@ -1,4 +1,5 @@
 using HotelBookingAPI.Connection;
+using HotelBookingAPI.Repository;
 using Serilog;
 
 namespace HotelBookingAPI
@@ -25,6 +26,7 @@ namespace HotelBookingAPI
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddTransient<SqlConnectionFactory>();
+            builder.Services.AddScoped<UserRepository>();
 
             var app = builder.Build();
 
