@@ -28,6 +28,7 @@ namespace HotelBookingAPI
             builder.Services.AddTransient<SqlConnectionFactory>();
             builder.Services.AddScoped<UserRepository>();
             builder.Services.AddScoped<RoomTypeRepository>();
+            builder.Services.AddScoped<RoomRepository>();
 
             var app = builder.Build();
 
